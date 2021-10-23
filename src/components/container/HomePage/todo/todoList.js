@@ -6,7 +6,7 @@ import {TodoContext} from '../../../../context/todoContext';
 
 function TodoList() {
     const {todos} = useContext(TodoContext);
-    const [userInput, setUserInput, showText, setShowText] = useState('');
+    const [userInput, setUserInput] = useState('');
     console.log(userInput);
 
     // Remove id
