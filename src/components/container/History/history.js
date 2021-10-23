@@ -11,7 +11,7 @@ export const History = () => {
              <h1>
                 History <span>Things Done</span>
             </h1>
-            {todos.map((item) => {
+            {todos.forEach((item) => {
                 if(item.completed === true){
                     console.log(item);
                     return (

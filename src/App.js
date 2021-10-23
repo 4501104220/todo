@@ -10,12 +10,12 @@ function App() {
   return (
     <div className="App">
       <MyContextProvider>
-        <h1>TO DO APP</h1>
+        <h1>TODO APP</h1>
         <TodoProvider>
           <BrowserRouter>
-            {/* <!-- Menu ngang --> */}
+            {/* <!-- Menu --> */}
             <Menu />
-            {/* Định tuyến */}  
+            {/* Route */}
             <Switch>
               {routes.map((item, index) => {
                 return (

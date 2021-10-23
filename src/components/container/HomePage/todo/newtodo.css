@@ -27,7 +27,7 @@
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
-    transform: background 0.2s ease-out;
+    /*transform: background 0.2s ease-out;*/
   }
   
   .NewTodoForm button:hover {
