@@ -10,7 +10,7 @@ function App() {
     return (
         <div className="App">
             <MyContextProvider>
-                <h1>THANGTRAN - TODO APP</h1>
+                <h3>THANGTRAN - TODO APP</h3>
                 <TodoProvider>
                     <BrowserRouter>
                         {/* <!-- Menu --> */}
