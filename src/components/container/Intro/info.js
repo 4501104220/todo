@@ -1,5 +1,5 @@
-import { styled } from '@mui/material/styles';
-import { Stack, Badge, Avatar, Typography, Divider } from '@mui/material';
+import {styled} from '@mui/material/styles';
+import {Stack, Badge, Avatar, Typography, Divider} from '@mui/material';
 
 const INFORMATIONS = [
     {
@@ -18,7 +18,7 @@ const INFORMATIONS = [
 
 export const Info = () => (
     <RootStyle
-        direction={{ xs: 'column', sm: 'row', md: 'row', lg: 'row' }}
+        direction={{xs: 'column', sm: 'row', md: 'row', lg: 'row'}}
         justifyContent='space-around'
         alignItems='center'
     >
@@ -27,14 +27,13 @@ export const Info = () => (
         >
             <StyledBadge
                 overlap="circular"
-                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
                 variant="dot"
             >
                 <Avatar
-                    alt="Remy Sharp"
-                    // src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.6435-9/137381468_1078505349330475_7599036906699935928_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=vyfmTj5VmvoAX8uf27U&_nc_ht=scontent.fsgn5-5.fna&oh=d3ffd3f6817a40c019a9398821bd20d6&oe=619273C4"
-                   src="http://kcadesigngroup.com/wp-content/uploads/2015/06/male-avatar-vector.png"
-                    sx={{ width: '100px', height: '100px' }}
+                    alt="TT"
+                    src="http://kcadesigngroup.com/wp-content/uploads/2015/06/male-avatar-vector.png"
+                    sx={{width: '100px', height: '100px'}}
                 />
             </StyledBadge>
             <Typography variant='subtitle1'>
@@ -44,10 +43,10 @@ export const Info = () => (
                 ID: 4501104220
             </Typography>
         </Stack>
-        <Divider orientation='vertical' />
+        <Divider orientation='vertical'/>
         <Stack
             spacing={1}
-            sx={{ width: '40%' }}
+            sx={{width: '40%'}}
         >
             <Divider>
                 <Typography variant='title'>
@@ -56,19 +55,19 @@ export const Info = () => (
             </Divider>
             {INFORMATIONS.map(infor => (
                 <Stack direction='row' spacing={1} key={infor.title}>
-                    <Typography variant='title' sx={{ color: '#000000'}}>
+                    <Typography variant='title' sx={{color: '#000000'}}>
                         {infor.title}:
                     </Typography>
-                    <Typography >
+                    <Typography>
                         {infor.text}
                     </Typography>
                 </Stack>
             ))}
         </Stack>
-    </RootStyle >
+    </RootStyle>
 );
 
-const RootStyle = styled(Stack)(({ theme }) => ({
+const RootStyle = styled(Stack)(({theme}) => ({
     width: '58%',
     height: '370px',
     boxShadow: '20px 20px 50px rgba(0,0,0,0.5)',
@@ -97,7 +96,7 @@ const RootStyle = styled(Stack)(({ theme }) => ({
     }
 }));
 
-const StyledBadge = styled(Badge)(({ theme }) => ({
+const StyledBadge = styled(Badge)(({theme}) => ({
     '& .MuiBadge-badge': {
         backgroundColor: '#44b700',
         color: '#44b700',

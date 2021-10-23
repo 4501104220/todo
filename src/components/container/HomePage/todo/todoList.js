@@ -28,7 +28,7 @@ function TodoList() {
         setUserInput(updatedTodos);
     };
 
-    //Edit id
+    // Edit id
     const update = (id, updtedTask) => {
         const updatedTodos = todos.map(todo => {
             if (todo.id === id) {
@@ -66,7 +66,7 @@ function TodoList() {
     return (
         <div className="TodoList">
             <h1>
-                <span>A simple React Todo List App</span>
+                <span>A Simple React Todo List App</span>
             </h1>
             <NewTodoForm/>
             <ul>{todosList}</ul>

@@ -1,13 +1,15 @@
-import { createContext, useState } from "react";
+import {createContext, useState} from "react";
 
 export const MyContext = createContext({
     count: 0,
     isLogin: false,
-    setCount: () => { },
-    setIsLogin: () => { }
+    setCount: () => {
+    },
+    setIsLogin: () => {
+    }
 });
 
-export const MyContextProvider = ({ children }) => {
+export const MyContextProvider = ({children}) => {
     const [myCount, setMyCount] = useState(0);
     const [isLogged, setIsLogged] = useState(false);
     return (

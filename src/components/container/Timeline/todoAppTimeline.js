@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
-import { TodoContext } from '../../../context/todoContext';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import React, {useContext} from 'react';
+import {TodoContext} from '../../../context/todoContext';
+import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { ReactComponent as WorkIcon } from "./work.svg";
-import { ReactComponent as SchoolIcon } from "./school.svg";
+import {ReactComponent as WorkIcon} from "./work.svg";
+import {ReactComponent as SchoolIcon} from "./school.svg";
 
 export function TodoAppTimeline(update) {
-    const { todos } = useContext(TodoContext);
+    const {todos} = useContext(TodoContext);
     return (
         <div>
             <VerticalTimeline>
@@ -16,10 +16,10 @@ export function TodoAppTimeline(update) {
                             key={item.id}
                             // date={item.deadline}
                             className="vertical-timeline-element--work"
-                            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-                            contentStyle={{ color: "rgb(33, 150, 243)", background: "#fff" }}
-                            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-                            icon={item.completed ? <SchoolIcon /> : <WorkIcon />}
+                            iconStyle={{background: "rgb(33, 150, 243)", color: "#fff"}}
+                            contentStyle={{color: "rgb(33, 150, 243)", background: "#fff"}}
+                            contentArrowStyle={{borderRight: "7px solid  rgb(33, 150, 243)"}}
+                            icon={item.completed ? <SchoolIcon/> : <WorkIcon/>}
                         >
                             <h3 className="vertical-timeline-element-title">
                                 {item.title}
@@ -28,28 +28,28 @@ export function TodoAppTimeline(update) {
                                 {item.deadline}
                             </h5>
                             {!item.completed && (
-                                <p 
-                                    style={{ 
-                                        padding: 9, 
-                                        margin: 3, 
-                                        backgroundColor: '#DC143C', 
-                                        color: 'white' 
-                                        }}
-                                    >
+                                <p
+                                    style={{
+                                        padding: 9,
+                                        margin: 3,
+                                        backgroundColor: '#DC143C',
+                                        color: 'white'
+                                    }}
+                                >
                                     Doing
                                 </p>
                             )}
                             {item.completed && (
-                                <p 
-                                style={{ 
-                                    padding: 9, 
-                                    margin: 3, 
-                                    backgroundColor: '#9ACD32', 
-                                    color: 'white' 
+                                <p
+                                    style={{
+                                        padding: 9,
+                                        margin: 3,
+                                        backgroundColor: '#9ACD32',
+                                        color: 'white'
                                     }}
                                 >
-                                Done
-                            </p>
+                                    Done
+                                </p>
                             )}
                         </VerticalTimelineElement>
                     )

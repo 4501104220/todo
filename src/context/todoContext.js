@@ -1,13 +1,14 @@
-import { createContext, useState } from "react";
+import {createContext, useState} from "react";
 
 const initialValues = {
     todos: [],
-    createTodo: () => {}
+    createTodo: () => {
+    }
 };
 
 const TodoContext = createContext(initialValues);
 
-const TodoProvider = ({ children }) => {
+const TodoProvider = ({children}) => {
     const [todos, setTodos] = useState([]);
     const createTodo = newTodo => {
         console.log(newTodo);

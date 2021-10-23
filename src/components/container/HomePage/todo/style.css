@@ -2,10 +2,11 @@
     /* margin: 0; */
     padding: 0;
     box-sizing: border-box;
-  }
-  html, body {
+}
+
+html, body {
     background: linear-gradient(90deg, #b8eec3, #b3dbd3, #5fb1ef);
     font-size: 1.1rem;
     font-family: "Quicksand", sans-serif;
     height: 100%;
-  }
+}
